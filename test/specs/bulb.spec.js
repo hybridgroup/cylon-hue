@@ -1,9 +1,9 @@
 'use strict';
 
-var Hue = source("driver");
+var Bulb = source("bulb");
 
-describe("Cylon.Drivers.Hue", function() {
-  var driver = new Hue({
+describe("Cylon.Drivers.Hue.Bulb", function() {
+  var driver = new Bulb({
     device: { connection: 'connect' }
   });
 

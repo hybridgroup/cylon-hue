@@ -13,9 +13,12 @@ describe("Cylon.Hue", function() {
   });
 
   describe("#driver", function() {
-    it("returns an instance of the Bulb", function() {
-      var args = { device: {} };
-      expect(module.driver(args)).to.be.instanceOf(Bulb);
+    var opts = { device: {}, extraParams: {} };
+
+    it("can instantiate a new Bulb", function() {
+      opts.name = 'hue-bulb';
+      var driver = module.driver(opts);
+      expect(driver).to.be.an.instanceOf(Bulb);
     });
   });
 
