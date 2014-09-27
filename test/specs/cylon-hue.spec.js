@@ -3,7 +3,7 @@
 var module = source("cylon-hue");
 
 var Adaptor = source('adaptor'),
-    Driver = source('driver');
+    Bulb = source('bulb');
 
 describe("Cylon.Hue", function() {
   describe("#register", function() {
@@ -13,9 +13,9 @@ describe("Cylon.Hue", function() {
   });
 
   describe("#driver", function() {
-    it("returns an instance of the Driver", function() {
+    it("returns an instance of the Bulb", function() {
       var args = { device: {} };
-      expect(module.driver(args)).to.be.instanceOf(Driver);
+      expect(module.driver(args)).to.be.instanceOf(Bulb);
     });
   });
 
