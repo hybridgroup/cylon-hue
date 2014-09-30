@@ -1,7 +1,7 @@
 var HueApi = require("node-hue-api").HueApi;
 
 if (process.argv[2] === null || process.argv[3] === null) {
-	throw("USAGE: node create_user 192.168.1.1 user-description")
+	throw("USAGE: node create_user 192.168.1.1 username")
 }
 
 var hostname = process.argv[2],

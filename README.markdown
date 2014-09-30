@@ -14,8 +14,6 @@ Install the module with: `npm install cylon-hue`
 
 ## Examples
 
-## Connecting
-
 ```javascript
 var Cylon = require('cylon');
 
@@ -31,7 +29,13 @@ Cylon.robot({
 }).start();
 ```
 
-Explain how to connect from the computer to the device here...
+## Connecting
+
+To connect cylon-hue to a Phillips Hue bridge, you will need to know which host IP address the bridge has on the local network. You can find this out by using your router, or logging into the "Meet Hue" website at [https://www.meethue.com/en-us/user/bridge](https://www.meethue.com/en-us/user/bridge) if you have linked your bridge. 
+
+You also need to either already have a user account on the bridge, or create a new account, so you can obtain the username. You can do this by using the JS file located at `examples/create_user.js`.
+
+Lastly, you need to know the ID for each light bulb that you want to control. You can do this by using the JS file located at `examples/bridge_state.js`.
 
 ## Contributing
 
