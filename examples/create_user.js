@@ -1,26 +1,21 @@
-var HueApi = require("node-hue-api").HueApi;
+// To run: node examples/create_user.js 192.168.1.85 35dacee025cd94cf3f50bb301ad8b4bf newdescription
 
-if (process.argv[2] === null || process.argv[3] === null) {
-	throw("USAGE: node create_user 192.168.1.1 user-description")
-}
+var cylon = require('cylon');
 
-var hostname = process.argv[2],
-    newUserName = null // You can provide your own username value, but it is normally easier to leave it to the Bridge to create it
-    userDescription = process.argv[3];
-
-var displayUserResult = function(result) {
-    console.log("Created user: " + JSON.stringify(result));
-};
-
-var displayError = function(err) {
-    console.log(err);
-};
-
-var hue = new HueApi();
-
-// --------------------------
-// Using a callback (with default description and auto generated username)
-hue.createUser(hostname, null, null, function(err, user) {
-    if (err) throw err;
-    displayUserResult(user);
-});
+cylon.robot({
+  connection: { name: 'hue', adaptor: 'hue', host: process.argv[2], username: process.argv[3] },
+  device: {name: 'bridge', driver: 'hue-bridge'}
+})
+.on('ready', function(my) {
+	my.bridge.createUser(null, process.argv[4], function(err, user) {
+    if (err) {
+    	console.log(err);
+    } else {
+    	console.log(user);
+    }
+	});
+})
+.on('error', function(err) {
+  console.log(err);
+})
+.start();
