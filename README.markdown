@@ -19,7 +19,7 @@ var Cylon = require('cylon');
 
 Cylon.robot({
   connection: { name: 'hue', adaptor: 'hue', host: '192.168.1.85', username: 'XXX' },
-  device: {name: 'bulb', driver: 'hue-bulb', lightId: 2},
+  device: {name: 'bulb', driver: 'hue-light', lightId: 2},
 
   work: function(my) {
     every((1).second(), function() {
