@@ -1,26 +1,18 @@
-var HueApi = require("node-hue-api").HueApi;
+// To run: node examples/bridge_state.js 192.168.1.85 35dacee025cd94cf3f50bb301ad8b4bf
 
-if (process.argv[2] == null || process.argv[3] == null) {
-	throw("USAGE: node bridge_state 192.168.1.1 username");
-}
+var Cylon = require('cylon');
 
-var displayResult = function(result) {
-    console.log(JSON.stringify(result, null, 2));
-};
+Cylon.robot({
+  connection: { name: 'hue', adaptor: 'hue', host: process.argv[2], username: process.argv[3] },
+  device: {name: 'bridge', driver: 'hue-bridge'},
 
-var hostname = process.argv[2],
-    username = process.argv[3],
-    api;
-
-api = new HueApi(hostname, username);
-
-// --------------------------
-// Using a promise
-api.getFullState().then(displayResult).done();
-
-// --------------------------
-// Using a callback
-api.getFullState(function(err, config) {
-    if (err) throw err;
-    displayResult(config);
-});
+  work: function(my) {
+    my.bridge.getFullState(function(err, config) {
+	    if (err) {
+	    	console.log(err);
+	    } else {
+	    	console.log(config);
+	    }
+		});
+  }
+}).start();

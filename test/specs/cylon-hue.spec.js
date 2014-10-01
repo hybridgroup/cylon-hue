@@ -3,6 +3,7 @@
 var module = source("cylon-hue");
 
 var Adaptor = source('adaptor'),
+    Bridge = source('bridge'),
     Light = source('light');
 
 describe("Cylon.Hue", function() {
@@ -13,7 +14,13 @@ describe("Cylon.Hue", function() {
   });
 
   describe("#driver", function() {
-    var opts = { device: {}, extraParams: {} };
+    var opts = { device: {connection: 'test'}, extraParams: {} };
+
+    it("can instantiate a new Bridge", function() {
+      opts.name = 'hue-bridge';
+      var driver = module.driver(opts);
+      expect(driver).to.be.an.instanceOf(Bridge);
+    });
 
     it("can instantiate a new Light", function() {
       opts.name = 'hue-light';
