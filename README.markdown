@@ -55,7 +55,7 @@ Lastly, you need to know the ID for each light bulb that you want to control. Yo
 
 ## Release History
 
-None yet...
+Version 0.1.0 - Initial release for ongoing development
 
 ## License
 
