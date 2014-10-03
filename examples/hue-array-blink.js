@@ -15,12 +15,9 @@ Cylon.robot({
 
   work: function(my) {
     every((1).second(), function() {
-      my.bulb1.toggle();
-      my.bulb2.toggle();
-      my.bulb3.toggle();
-      my.bulb4.toggle();
-      my.bulb5.toggle();
-      my.bulb6.toggle();
+    	for (var d in my.devices) {
+      	my[d].toggle();
+    	}
     });
   }
 }).start();

@@ -17,18 +17,11 @@ Cylon.robot({
     return Math.floor(Math.random() * 255);
   },
 
-  setRGB: function(bulb) {
-    bulb.rgb(this.randomNumber(), this.randomNumber(), this.randomNumber());
-  },
-
   work: function(my) {
     every((1).second(), function() {
-      my.setRGB(my.bulb1);
-      my.setRGB(my.bulb2);
-      my.setRGB(my.bulb3);
-      my.setRGB(my.bulb4);
-      my.setRGB(my.bulb5);
-      my.setRGB(my.bulb6);
+      for (var d in my.devices) {
+        my[d].rgb(my.randomNumber(), my.randomNumber(), my.randomNumber());
+      }
     });
   }
 }).start();
