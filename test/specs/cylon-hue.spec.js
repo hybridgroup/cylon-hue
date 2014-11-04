@@ -7,9 +7,15 @@ var Adaptor = source('adaptor'),
     Light = source('light');
 
 describe("Cylon.Hue", function() {
-  describe("#register", function() {
-    it("should be a function", function() {
-      expect(module.register).to.be.a('function');
+  describe("#adaptors", function() {
+    it('is an array of supplied adaptors', function() {
+      expect(module.adaptors).to.be.eql(['hue']);
+    });
+  });
+
+  describe("#drivers", function() {
+    it('is an array of supplied drivers', function() {
+      expect(module.drivers).to.be.eql(['hue-bridge', 'hue-light']);
     });
   });
 
