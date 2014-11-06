@@ -55,6 +55,8 @@ Lastly, you need to know the ID for each light bulb that you want to control. Yo
 
 ## Release History
 
+Version 0.2.0 - Updates for compatability with Cylon 0.20.0
+
 Version 0.1.0 - Initial release for ongoing development
 
 ## License
