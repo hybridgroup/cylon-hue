@@ -20,7 +20,7 @@ describe("Cylon.Hue", function() {
   });
 
   describe("#driver", function() {
-    var opts = { device: {connection: 'test'} };
+    var opts = { connection: {} };
 
     it("can instantiate a new Bridge", function() {
       opts.driver = 'hue-bridge';
