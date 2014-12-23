@@ -10,11 +10,13 @@ https://github.com/hybridgroup/cylon
 
 [![Build Status](https://secure.travis-ci.org/hybridgroup/cylon-hue.png?branch=master)](http://travis-ci.org/hybridgroup/cylon-hue) [![Code Climate](https://codeclimate.com/github/hybridgroup/cylon-hue/badges/gpa.svg)](https://codeclimate.com/github/hybridgroup/cylon-hue) [![Test Coverage](https://codeclimate.com/github/hybridgroup/cylon-hue/badges/coverage.svg)](https://codeclimate.com/github/hybridgroup/cylon-hue)
 
-## Getting Started
+## How to Install
 
-Install the module with: `npm install cylon-hue`
+Install the module with:
 
-## Examples
+    $ npm install cylon-hue
+
+## How to Use
 
 ```javascript
 var Cylon = require('cylon');
@@ -36,13 +38,19 @@ Cylon.robot({
 }).start();
 ```
 
-## Connecting
+## How to Connect
 
-To connect cylon-hue to a Phillips Hue bridge, you will need to know which host IP address the bridge has on the local network. You can find this out by using your router, or logging into the "Meet Hue" website at [https://www.meethue.com/en-us/user/bridge](https://www.meethue.com/en-us/user/bridge) if you have linked your bridge. 
+To connect cylon-hue to a Phillips Hue bridge, you will need to know which host IP address the bridge has on the local network. You can find this out by using your router, or logging into the "Meet Hue" website at [https://www.meethue.com/en-us/user/bridge](https://www.meethue.com/en-us/user/bridge) if you have linked your bridge.
 
 You also need to either already have a user account on the bridge, or create a new account, so you can obtain the username. You can do this by using the JS file located at `examples/create_user.js`.
 
 Lastly, you need to know the ID for each light bulb that you want to control. You can do this by using the JS file located at `examples/bridge_state.js`.
+
+## Documentation
+
+We're busy adding documentation to our web site at http://cylonjs.com/ please check there as we continue to work on Cylon.js
+
+Thank you!
 
 ## Contributing
 
