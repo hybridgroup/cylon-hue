@@ -1,12 +1,14 @@
-var Cylon = require('cylon');
+"use strict";
+
+var Cylon = require("cylon");
 
 Cylon.robot({
   connections: {
-    hue: { adaptor: 'hue', host: process.argv[2], username: process.argv[3] }
+    hue: { adaptor: "hue", host: process.argv[2], username: process.argv[3] }
   },
 
   devices: {
-    bulb: { driver: 'hue-light', lightId: 2 }
+    bulb: { driver: "hue-light", lightId: 2 }
   },
 
   randomNumber: function() {
@@ -16,7 +18,7 @@ Cylon.robot({
   work: function(my) {
     my.bulb.turnOn();
 
-    every(0.5.seconds(), function() {
+    every((0.5).seconds(), function() {
       my.bulb.rgb(my.randomNumber(), my.randomNumber(), my.randomNumber());
     });
   }
