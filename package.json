@@ -1,6 +1,6 @@
 {
   "name": "cylon-hue",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "lib/cylon-hue.js",
   "description": "Cylon module for Phillips Hue",
   "homepage": "http://cylonjs.com",
@@ -24,11 +24,11 @@
   },
 
   "peerDependencies": {
-    "cylon": ">=0.21.0 < 1"
+    "cylon": ">=0.22.0 < 1"
   },
 
   "dependencies": {
-    "cylon": "~0.21.0",
+    "cylon": "~0.22.0",
     "node-hue-api": "^0.2.3"
   }
 }
