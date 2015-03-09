@@ -14,7 +14,7 @@ https://github.com/hybridgroup/cylon
 
 Install the module with:
 
-    $ npm install cylon-hue
+    $ npm install cylon cylon-hue
 
 ## How to Use
 
