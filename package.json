@@ -2,7 +2,7 @@
   "name": "cylon-hue",
   "version": "0.5.0",
   "main": "lib/cylon-hue.js",
-  "description": "Cylon module for Phillips Hue",
+  "description": "Cylon.js module for Phillips Hue",
   "homepage": "http://cylonjs.com",
   "bugs": "https://github.com/hybridgroup/cylon-hue/issues",
 
@@ -13,7 +13,19 @@
     "url": "https://github.com/hybridgroup/cylon-firmata"
   },
 
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
+
+  "keywords": [
+    "cylon",
+    "cylonjs",
+    "cylons",
+    "robot",
+    "robots",
+    "robotics",
+    "iot",
+    "hardware",
+    "hue"
+  ],
 
   "devDependencies": {
     "sinon-chai": "2.5.0",
