@@ -1,7 +1,6 @@
-/* jshint expr:true */
 "use strict";
 
-var Hue = source("adaptor");
+var Hue = lib("adaptor");
 
 describe("Cylon.Adaptors.Hue", function() {
   var adaptor = new Hue();

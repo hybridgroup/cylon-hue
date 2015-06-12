@@ -1,11 +1,10 @@
-/* jshint expr:true */
 "use strict";
 
-var hue = source("cylon-hue");
+var hue = lib("cylon-hue");
 
-var Adaptor = source("adaptor"),
-    Bridge = source("bridge"),
-    Light = source("light");
+var Adaptor = lib("adaptor"),
+    Bridge = lib("bridge"),
+    Light = lib("light");
 
 describe("Cylon.Hue", function() {
   describe("#adaptors", function() {

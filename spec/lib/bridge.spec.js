@@ -1,7 +1,6 @@
-/* jshint expr:true */
 "use strict";
 
-var Bridge = source("light");
+var Bridge = lib("light");
 
 describe("Cylon.Drivers.Hue.Bridge", function() {
   var driver = new Bridge({

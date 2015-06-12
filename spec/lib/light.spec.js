@@ -1,7 +1,6 @@
-/* jshint expr:true */
 "use strict";
 
-var Light = source("light");
+var Light = lib("light");
 
 describe("Cylon.Drivers.Hue.Light", function() {
   var driver = new Light({
