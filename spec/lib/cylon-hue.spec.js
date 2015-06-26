@@ -1,6 +1,6 @@
 "use strict";
 
-var hue = lib("cylon-hue");
+var hue = lib("../");
 
 var Adaptor = lib("adaptor"),
     Bridge = lib("bridge"),
